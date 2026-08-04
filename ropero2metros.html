@@ -124,7 +124,15 @@ max-width:90%;
 max-height:90%;
 border-radius:15px;
 }
-
+#visor span{
+position:absolute;
+top:25px;
+right:30px;
+font-size:35px;
+color:white;
+cursor:pointer;
+font-weight:bold;
+  }
 </style>
 
 </head>
@@ -237,8 +245,12 @@ Volver a roperos
 </p>
 
 </footer>
-<div id="visor" onclick="cerrarImagen()">
+<div id="visor">
+
+<span onclick="cerrarImagen()">✕</span>
+
 <img id="imagenGrande">
+
 </div>
 
 <script>
