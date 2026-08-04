@@ -165,7 +165,7 @@ Ideal para quienes buscan la máxima capacidad de guardado sin perder estilo.
 </div>
 
 <div>
-<img src="ropero2metroscaoba.png">
+<img src="ropero2metroscaoba.png" onclick="abrirImagen(this.src)">
 <p class="color">🤎 Caoba</p>
 </div>
 
@@ -218,6 +218,21 @@ Volver a roperos
 </p>
 
 </footer>
+<div id="visor" onclick="cerrarImagen()">
+<img id="imagenGrande">
+</div>
 
+<script>
+
+function abrirImagen(src){
+document.getElementById("imagenGrande").src = src;
+document.getElementById("visor").style.display="flex";
+}
+
+function cerrarImagen(){
+document.getElementById("visor").style.display="none";
+}
+
+</script>
 </body>
 </html>
