@@ -105,7 +105,34 @@ text-align:center;
 padding:25px;
 margin-top:40px;
 }
+#visor{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
 
+#visor img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+}
+
+#visor span{
+position:absolute;
+top:25px;
+right:30px;
+font-size:35px;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
 </style>
 
 </head>
@@ -162,25 +189,25 @@ Diseño resistente y funcional para organizar tu habitación.
 
 
 <div>
-<img src="roperode080natural.jpg">
+<img src="roperode080natural.jpg" onclick="abrirImagen(this.src)">
 <p class="color">🌲 Natural</p>
 </div>
 
 
 <div>
-<img src="roperode080blanco.png">
+<img src="roperode080blanco.png" onclick="abrirImagen(this.src)">
 <p class="color">⚪ Blanco</p>
 </div>
 
 
 <div>
-<img src="roperode080caoba.png">
+<img src="roperode080caoba.png" onclick="abrirImagen(this.src)">
 <p class="color">🤎 Caoba</p>
 </div>
 
 
 <div>
-<img src="roperode080rosabebé.jpg">
+<img src="roperode080rosabebé.jpg" onclick="abrirImagen(this.src)">
 <p class="color">🩷 Rosa Bebé</p>
 </div>
 
@@ -225,7 +252,26 @@ Volver a roperos
 </p>
 
 </footer>
+<div id="visor">
 
+<span onclick="cerrarImagen()">✕</span>
+
+<img id="imagenGrande">
+
+</div>
+
+<script>
+
+function abrirImagen(src){
+document.getElementById("imagenGrande").src = src;
+document.getElementById("visor").style.display="flex";
+}
+
+function cerrarImagen(){
+document.getElementById("visor").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
