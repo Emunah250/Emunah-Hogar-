@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Muebles de Cocina - Emunáh Hogar</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+}
+
+header{
+background:white;
+padding:30px;
+text-align:center;
+}
+
+header h1{
+color:#111;
+font-size:38px;
+}
+
+header p{
+color:#444;
+margin-top:10px;
+}
+
+.seccion{
+padding:40px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,350px));
+gap:25px;
+justify-content:center;
+}
+
+.card{
+background:#111;
+border-radius:15px;
+padding:20px;
+text-align:center;
+box-shadow:0 5px 15px rgba(255,255,255,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+.card h3{
+color:#c9a227;
+margin-bottom:10px;
+}
+
+.boton{
+display:inline-block;
+padding:14px 35px;
+background:#c9a227;
+color:#111;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+margin-top:15px;
+}
+
+footer{
+background:#222;
+padding:25px;
+text-align:center;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Emunáh Hogar</h1>
+
+<p>Muebles de Cocina</p>
+
+</header>
+
+<section class="seccion">
+
+<div class="grid">
+
+<div class="card">
+
+<img src="modulares.jpg" alt="Modulares">
+
+<h3>🧩 Modulares</h3>
+
+<p>Modulares modernos para organizar tu cocina.</p>
+
+<a class="boton" href="modulares.html">
+
+Ver modelos
+
+</a>
+
+</div>
+
+<div class="card">
+
+<img src="alacenabajomesada.jpg" alt="Alacenas y Bajomesadas">
+
+<h3>🍽️ Alacenas y Bajomesadas</h3>
+
+<p>Conjuntos y módulos para equipar tu cocina.</p>
+
+<a class="boton" href="alacenasybajomesadas.html">
+
+Ver modelos
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Emunáh Hogar</h3>
+
+<p>📍 Bariloche 6144 - González Catán</p>
+
+<p>💳 Créditos solo con DNI<br>
+🚚 Envíos sin cargo dentro de la zona</p>
+
+</footer>
+
+</body>
+</html>
