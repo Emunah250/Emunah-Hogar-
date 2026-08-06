@@ -105,7 +105,34 @@ text-align:center;
 padding:25px;
 margin-top:40px;
 }
+#visor{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
 
+#visor img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+}
+
+#visor span{
+position:absolute;
+top:25px;
+right:30px;
+font-size:35px;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
 </style>
 
 </head>
@@ -124,7 +151,7 @@ margin-top:40px;
 
 <div class="imagen-principal">
 
-<img src="Ropero1,60mts.jpg" alt="Ropero de 160 cm">
+<img src="Ropero1,60mts.jpg" onclick="abrirImagen(this.src)">
 
 </div>
 
@@ -158,27 +185,27 @@ Diseño funcional con gran capacidad de guardado para tu habitación.
 
 
 <div>
-<img src="Ropero1,60mts.jpg">
+<img src="ropero160natural.jpg" onclick="abrirImagen(this.src)">
 <p class="color">🌲 Natural</p>
 </div>
 
 <div>
-<img src="ropero160caoba.png">
+<img src="ropero160caoba.png" onclick="abrirImagen(this.src)">
 <p class="color">🤎 Caoba</p>
 </div>
 
 <div>
-<img src="ropero160combinado.png">
+<img src="ropero160combinado.png" onclick="abrirImagen(this.src)">
 <p class="color">🎨 Combinado</p>
 </div>
 
 <div>
-<img src="ropero160combinadoo.jpg">
+<img src="ropero160combinadoo.jpg" onclick="abrirImagen(this.src)">
 <p class="color">🎨 Combinado Variante</p>
 </div>
 
 <div>
-<img src="ropero160gris.png">
+<img src="ropero160gris.png" onclick="abrirImagen(this.src)">
 <p class="color">🩶 Gris</p>
 </div>
 
@@ -230,6 +257,25 @@ Volver a roperos
 
 </footer>
 
+<div id="visor">
 
+<span onclick="cerrarImagen()">✕</span>
+
+<img id="imagenGrande">
+
+</div>
+
+<script>
+
+function abrirImagen(src){
+document.getElementById("imagenGrande").src = src;
+document.getElementById("visor").style.display="flex";
+}
+
+function cerrarImagen(){
+document.getElementById("visor").style.display="none";
+}
+
+</script>
 </body>
 </html>
